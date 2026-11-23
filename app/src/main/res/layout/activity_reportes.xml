@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#F3F6FA">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reportes de inventario"
+        android:textColor="#173B65"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="25dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resumen de equipos"
+        android:textColor="#173B65"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:id="@+id/tvTotalReportes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total de equipos: 0"
+        android:textColor="#FFFFFF"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="22dp"
+        android:background="#173B65"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:id="@+id/tvFuncionan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Equipos que funcionan: 0"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="22dp"
+        android:background="#218838"
+        android:layout_marginBottom="15dp"/>
+
+    <TextView
+        android:id="@+id/tvNoFuncionan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Equipos que no funcionan: 0"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="22dp"
+        android:background="#B42318"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Volver al menú"
+        android:textAllCaps="false"
+        android:backgroundTint="#1769AA"/>
+
+</LinearLayout>

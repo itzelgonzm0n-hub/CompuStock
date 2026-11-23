@@ -30,5 +30,8 @@ class PanelActivity : AppCompatActivity() {
             startActivity(Intent(this, InventarioActivity::class.java)
             )
         }
+        binding.btnReportes.setOnClickListener {
+            startActivity(Intent(this, ReportesActivity::class.java))
+        }
     }
 }
