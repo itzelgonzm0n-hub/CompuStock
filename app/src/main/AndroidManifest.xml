@@ -42,6 +42,8 @@
             android:exported="false" />
         <activity android:name=".EditarEquipoActivity"
             android:exported="false"/>
+        <activity android:name=".EliminarEquipoActivity"
+            android:exported="false"/>
 
 
     </application>

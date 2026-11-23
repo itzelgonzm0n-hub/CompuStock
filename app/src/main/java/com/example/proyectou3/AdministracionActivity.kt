@@ -29,7 +29,7 @@ class AdministracionActivity : AppCompatActivity() {
         }
 
         binding.btnEliminarEquipo.setOnClickListener {
-            Toast.makeText(this, "Eliminación de equipos", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, EliminarEquipoActivity::class.java))
         }
 
         binding.btnActualizarEstado.setOnClickListener {

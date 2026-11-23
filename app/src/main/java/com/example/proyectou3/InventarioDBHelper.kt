@@ -106,5 +106,14 @@ class InventarioDBHelper(context: Context) :
             arrayOf(id.toString())
         )
     }
+    fun eliminarEquipo(id: Int): Int{
+        val db=writableDatabase
+
+        return db.delete(
+            "equipos",
+            "id",
+            arrayOf(id.toString())
+        )
+    }
 
 }
