@@ -9,6 +9,7 @@ class InventarioDBHelper(context: Context) :
     SQLiteOpenHelper(context, "CompuStock.db", null, 1) {
 
     override fun onCreate(db: SQLiteDatabase) {
+
         val crearTabla = """
             CREATE TABLE equipos (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -41,6 +42,7 @@ class InventarioDBHelper(context: Context) :
     ): Long {
 
         val db = writableDatabase
+
         val valores = ContentValues().apply {
             put("nombre", nombre)
             put("tipo", tipo)
@@ -48,38 +50,36 @@ class InventarioDBHelper(context: Context) :
             put("serie", serie)
             put("estado", estado)
         }
-        fun obtenerEquipos(): ArrayList<Equipo> {
-
-            val lista = ArrayList<Equipo>()
-            val db = readableDatabase
-
-            val cursor = db.rawQuery(
-                "SELECT * FROM equipos ORDER BY id DESC",
-                null
-            )
-
-            if (cursor.moveToFirst()) {
-                do {
-                    val equipo = Equipo(
-                        id = cursor.getInt(0),
-                        nombre = cursor.getString(1),
-                        tipo = cursor.getString(2),
-                        marca = cursor.getString(3),
-                        serie = cursor.getString(4),
-                        estado = cursor.getString(5)
-                    )
-
-                    lista.add(equipo)
-
-                } while (cursor.moveToNext())
-            }
-
-            cursor.close()
-
-            return lista
-        }
-
 
         return db.insert("equipos", null, valores)
+    }
+
+    fun obtenerEquipos(): ArrayList<Equipo> {
+
+        val lista = ArrayList<Equipo>()
+        val db = readableDatabase
+
+        val cursor = db.rawQuery(
+            "SELECT * FROM equipos ORDER BY id DESC",
+            null
+        )
+
+        cursor.use {
+            while (it.moveToNext()) {
+
+                val equipo = Equipo(
+                    id = it.getInt(0),
+                    nombre = it.getString(1),
+                    tipo = it.getString(2),
+                    marca = it.getString(3),
+                    serie = it.getString(4),
+                    estado = it.getString(5)
+                )
+
+                lista.add(equipo)
+            }
+        }
+
+        return lista
     }
 }

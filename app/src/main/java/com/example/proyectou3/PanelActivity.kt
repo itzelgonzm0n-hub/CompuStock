@@ -19,9 +19,17 @@ class PanelActivity : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
+
         binding.btnRegistrarEquipo.setOnClickListener {
-            val intent= Intent(this, RegistrarActivity::class.java)
-            startActivity(intent)
+            startActivity(
+                Intent(this, RegistrarActivity::class.java)
+            )
+        }
+
+        binding.btnInventario.setOnClickListener {
+            startActivity(
+                Intent(this, InventarioActivity::class.java)
+            )
         }
     }
 }
