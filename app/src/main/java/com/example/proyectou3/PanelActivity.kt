@@ -27,8 +27,7 @@ class PanelActivity : AppCompatActivity() {
         }
 
         binding.btnInventario.setOnClickListener {
-            startActivity(
-                Intent(this, InventarioActivity::class.java)
+            startActivity(Intent(this, InventarioActivity::class.java)
             )
         }
     }
