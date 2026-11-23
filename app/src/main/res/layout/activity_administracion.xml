@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F6FA"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Administración de equipos"
+        android:textColor="#173B65"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gestiona los equipos registrados en CompuStock"
+        android:textColor="#64748B"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnConsultarEquipos"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Consultar equipos"
+        android:textAllCaps="false"
+        android:backgroundTint="#1769AA"/>
+
+    <Button
+        android:id="@+id/btnEditarEquipo"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Editar equipos"
+        android:textAllCaps="false"
+        android:backgroundTint="#1769AA"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/btnEliminarEquipo"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Eliminar equipos"
+        android:textAllCaps="false"
+        android:backgroundTint="#B42318"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/btnActualizarEstado"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Actualizar estado"
+        android:textAllCaps="false"
+        android:backgroundTint="#1769AA"
+        android:layout_marginTop="12dp"/>
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Volver al menú"
+        android:textAllCaps="false"
+        android:backgroundTint="#64748B"
+        android:layout_marginTop="24dp"/>
+
+</LinearLayout>

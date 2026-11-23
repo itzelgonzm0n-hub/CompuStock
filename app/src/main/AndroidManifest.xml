@@ -37,6 +37,10 @@
             android:name=".ReportesActivity"
             android:exported="false" />
 
+        <activity
+            android:name=".AdministracionActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
