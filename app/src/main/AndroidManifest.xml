@@ -40,6 +40,9 @@
         <activity
             android:name=".AdministracionActivity"
             android:exported="false" />
+        <activity android:name=".EditarEquipoActivity"
+            android:exported="false"/>
+
 
     </application>
 

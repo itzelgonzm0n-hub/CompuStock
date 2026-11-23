@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">proyectoU3</string>
+    <string-array name="tipos_equipo">
+        <item>Computadora</item>
+        <item>Monitor</item>
+        <item>Teclado</item>
+        <item>Raton</item>
+    </string-array>
 </resources>

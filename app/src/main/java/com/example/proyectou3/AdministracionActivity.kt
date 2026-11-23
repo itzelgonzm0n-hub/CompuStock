@@ -1,5 +1,6 @@
 package com.example.proyectou3
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -20,7 +21,7 @@ class AdministracionActivity : AppCompatActivity() {
         }
 
         binding.btnConsultarEquipos.setOnClickListener {
-            Toast.makeText(this, "Consulta de equipos", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, EditarEquipoActivity::class.java))
         }
 
         binding.btnEditarEquipo.setOnClickListener {
