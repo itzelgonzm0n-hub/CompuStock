@@ -33,7 +33,7 @@ class AdministracionActivity : AppCompatActivity() {
         }
 
         binding.btnActualizarEstado.setOnClickListener {
-            Toast.makeText(this, "Actualización de estado", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, ActualizarEstadoActivity::class.java))
         }
     }
 }

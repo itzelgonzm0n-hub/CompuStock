@@ -115,5 +115,18 @@ class InventarioDBHelper(context: Context) :
             arrayOf(id.toString())
         )
     }
+    fun actualizarEstado(id: Int,estado: String): Int{
+        val db = writableDatabase
+        val valores = ContentValues().apply {
+            put("Estado",estado)
+        }
+
+        return db.update(
+            "equipos",
+            valores,
+            "id=?",
+            arrayOf(id.toString())
+        )
+    }
 
 }
